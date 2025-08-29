@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Interactiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: inline-block;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    input {
+      width: 80px;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn-calc {
+      background: #4CAF50;
+      color: white;
+    }
+    .btn-clear {
+      background: #ccc;
+      color: black;
+    }
+    .resultado {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora</h1>
+
+  <!-- Resta -->
+  <div class="box">
+    <h3>Resta</h3>
+    <input type="number" id="restaA" placeholder="a">
+    <span>-</span>
+    <input type="number" id="restaB" placeholder="b">
+    <br>
+    <button class="btn-calc" onclick="calcularResta()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('resta')">Clear</button>
+    <div id="resultadoResta" class="resultado"></div>
+  </div>
+
+  <!-- Multiplicación -->
+  <div class="box">
+    <h3>Multiplicación</h3>
+    <input type="number" id="multiA" placeholder="a">
+    <span>*</span>
+    <input type="number" id="multiB" placeholder="b">
+    <br>
+    <button class="btn-calc" onclick="calcularMultiplicacion()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('multi')">Clear</button>
+    <div id="resultadoMultiplicacion" class="resultado"></div>
+  </div>
+
+  <!-- División -->
+  <div class="box">
+    <h3>División</h3>
+    <input type="number" id="divA" placeholder="a">
+    <span>/</span>
+    <input type="number" id="divB" placeholder="b">
+    <br>
+    <button class="btn-calc" onclick="calcularDivision()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('div')">Clear</button>
+    <div id="resultadoDivision" class="resultado"></div>
+  </div>
+
+  <!-- Factorial -->
+  <div class="box">
+    <h3>Factorial</h3>
+    <input type="number" id="factN" placeholder="n">
+    <br>
+    <button class="btn-calc" onclick="calcularFactorial()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('fact')">Clear</button>
+    <div id="resultadoFactorial" class="resultado"></div>
+  </div>
+
+  <!-- Exponente -->
+  <div class="box">
+    <h3>Exponente</h3>
+    <input type="number" id="expBase" placeholder="base">
+    <span>^</span>
+    <input type="number" id="expExp" placeholder="exponente">
+    <br>
+    <button class="btn-calc" onclick="calcularExponente()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('exp')">Clear</button>
+    <div id="resultadoExponente" class="resultado"></div>
+  </div>
+
+  <!-- Raíz Cuadrada -->
+  <div class="box">
+    <h3>Raíz Cuadrada</h3>
+    √ <input type="number" id="raizN" placeholder="n">
+    <br>
+    <button class="btn-calc" onclick="calcularRaiz()">Calculate ▶</button>
+    <button class="btn-clear" onclick="limpiar('raiz')">Clear</button>
+    <div id="resultadoRaiz" class="resultado"></div>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>

@@ -93,3 +93,26 @@ function limpiarExponente() {
   document.getElementById("exp").value = "";
   document.getElementById("resultadoExponente").innerHTML = "";
 }
+
+// ========== Operación RAÍZ CUADRADA ==========
+
+// Función para calcular raíz cuadrada
+function raizCuadrada(n) {
+  if (n < 0) return "Error: no se puede con negativos";
+  return Math.sqrt(n);
+}
+
+// Manejo del botón RAÍZ
+function calcularRaiz() {
+  const num = parseFloat(document.getElementById("raiz").value);
+
+  const resultado = raizCuadrada(num);
+
+  document.getElementById("resultadoRaiz").innerHTML = `Resultado: ${resultado}`;
+}
+
+// Limpiar inputs
+function limpiarRaiz() {
+  document.getElementById("raiz").value = "";
+  document.getElementById("resultadoRaiz").innerHTML = "";
+}

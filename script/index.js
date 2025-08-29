@@ -70,3 +70,26 @@ function limpiarDivision() {
   document.getElementById("resultadoDivision").innerHTML = "";
 }
 
+// ========== Operación EXPONENTE ==========
+
+// Función para calcular exponente (base^exponente)
+function exponente(base, exp) {
+  return Math.pow(base, exp);
+}
+
+// Manejo del botón EXPONENTE
+function calcularExponente() {
+  const base = parseFloat(document.getElementById("base").value);
+  const exp = parseInt(document.getElementById("exp").value);
+
+  const resultado = exponente(base, exp);
+
+  document.getElementById("resultadoExponente").innerHTML = `Resultado: ${resultado}`;
+}
+
+// Limpiar inputs
+function limpiarExponente() {
+  document.getElementById("base").value = "";
+  document.getElementById("exp").value = "";
+  document.getElementById("resultadoExponente").innerHTML = "";
+}

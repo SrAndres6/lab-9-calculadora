@@ -7,8 +7,8 @@ function restar(a, b) {
 
 // Manejo del botón de RESTA
 function calcularResta() {
-  const num1 = parseFloat(document.getElementById("resta1").value);
-  const num2 = parseFloat(document.getElementById("resta2").value);
+  const num1 = parseFloat(document.getElementById("restaA").value);
+  const num2 = parseFloat(document.getElementById("restaB").value);
 
   const resultado = restar(num1, num2);
 
@@ -17,8 +17,8 @@ function calcularResta() {
 
 // Limpiar los inputs y resultado de la resta
 function limpiarResta() {
-  document.getElementById("resta1").value = "";
-  document.getElementById("resta2").value = "";
+  document.getElementById("restaA").value = "";
+  document.getElementById("restaB").value = "";
   document.getElementById("resultadoResta").innerHTML = "";
 }
 
@@ -30,8 +30,8 @@ function multiplicar(a, b) {
 
 // Manejo del botón de MULTIPLICAR
 function calcularMultiplicacion() {
-  const num1 = parseFloat(document.getElementById("multi1").value);
-  const num2 = parseFloat(document.getElementById("multi2").value);
+  const num1 = parseFloat(document.getElementById("multiA").value);
+  const num2 = parseFloat(document.getElementById("multiB").value);
 
   const resultado = multiplicar(num1, num2);
 
@@ -40,8 +40,8 @@ function calcularMultiplicacion() {
 
 // Limpiar inputs y resultado de multiplicación
 function limpiarMultiplicacion() {
-  document.getElementById("multi1").value = "";
-  document.getElementById("multi2").value = "";
+  document.getElementById("multiA").value = "";
+  document.getElementById("multiB").value = "";
   document.getElementById("resultadoMultiplicacion").innerHTML = "";
 }
 
@@ -55,8 +55,8 @@ function dividir(a, b) {
 
 // Manejo del botón de DIVISIÓN
 function calcularDivision() {
-  const num1 = parseFloat(document.getElementById("div1").value);
-  const num2 = parseFloat(document.getElementById("div2").value);
+  const num1 = parseFloat(document.getElementById("divA").value);
+  const num2 = parseFloat(document.getElementById("divB").value);
 
   const resultado = dividir(num1, num2);
 
@@ -65,46 +65,46 @@ function calcularDivision() {
 
 // Limpiar inputs y resultado de división
 function limpiarDivision() {
-  document.getElementById("div1").value = "";
-  document.getElementById("div2").value = "";
+  document.getElementById("divA").value = "";
+  document.getElementById("divB").value = "";
   document.getElementById("resultadoDivision").innerHTML = "";
 }
 
 // ========== Operación EXPONENTE ==========
 
 // Función para calcular exponente (base^exponente)
-function exponente(base, exp) {
-  return Math.pow(base, exp);
+function exponente(expBase, expEpx) {
+  return Math.pow(expBase, expEpx);
 }
 
 // Manejo del botón EXPONENTE
 function calcularExponente() {
-  const base = parseFloat(document.getElementById("base").value);
-  const exp = parseInt(document.getElementById("exp").value);
+  const base = parseFloat(document.getElementById("expBase").value);
+  const exp = parseInt(document.getElementById("expExp").value);
 
-  const resultado = exponente(base, exp);
+  const resultado = exponente(expBase, expEpx);
 
   document.getElementById("resultadoExponente").innerHTML = `Resultado: ${resultado}`;
 }
 
 // Limpiar inputs
 function limpiarExponente() {
-  document.getElementById("base").value = "";
-  document.getElementById("exp").value = "";
+  document.getElementById("expBase").value = "";
+  document.getElementById("expExp").value = "";
   document.getElementById("resultadoExponente").innerHTML = "";
 }
 
 // ========== Operación RAÍZ CUADRADA ==========
 
 // Función para calcular raíz cuadrada
-function raizCuadrada(n) {
-  if (n < 0) return "Error: no se puede con negativos";
-  return Math.sqrt(n);
+function raizCuadrada(raizN) {
+  if (n < 0) return "Error: no se puede con nEpxegativos";
+  return Math.sqrt(raizN);
 }
 
 // Manejo del botón RAÍZ
 function calcularRaiz() {
-  const num = parseFloat(document.getElementById("raiz").value);
+  const num = parseFloat(document.getElementById("raizN").value);
 
   const resultado = raizCuadrada(num);
 
@@ -113,6 +113,6 @@ function calcularRaiz() {
 
 // Limpiar inputs
 function limpiarRaiz() {
-  document.getElementById("raiz").value = "";
+  document.getElementById("raizN").value = "";
   document.getElementById("resultadoRaiz").innerHTML = "";
 }
